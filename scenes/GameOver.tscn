@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Button.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/MainMenu.gd" type="Script" id=2]
+
+[node name="ColorRect" type="ColorRect"]
+margin_right = 1024.0
+margin_bottom = 599.0
+color = Color( 0.94902, 0.0470588, 0.0470588, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 175.0
+margin_top = 203.0
+margin_right = 843.0
+margin_bottom = 308.0
+custom_fonts/font = ExtResource( 1 )
+text = "Game Over
+You Have Skill Issue"
+align = 1
+
+[node name="Button" type="Button" parent="."]
+margin_left = 330.0
+margin_top = 386.0
+margin_right = 694.0
+margin_bottom = 467.0
+custom_fonts/font = ExtResource( 1 )
+text = "Main Menu"
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
